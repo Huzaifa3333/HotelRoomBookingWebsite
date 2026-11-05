@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Signup | Elysian Hotel & Stay</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Admin Signup CSS -->
+    <link rel="stylesheet" href="../css/admin-signup.css">
+</head>
+
+<body>
+
+<main class="signup-page">
+
+    <!-- Left Side: Branding -->
+    <section class="signup-branding">
+
+        <a href="../index.html" class="brand">
+            <span class="brand-icon">E</span>
+
+            <span class="brand-name">
+                ELYSIAN
+                <small>HOTEL & STAY</small>
+            </span>
+        </a>
+
+        <div class="branding-content">
+            <span class="section-label">ELYSIAN HOTEL & STAY</span>
+
+            <h1>
+                Hospitality,<br>
+                <span>Managed Elegantly.</span>
+            </h1>
+
+            <p>
+                “Manage your account, explore our rooms, and keep your reservations organized — all in one place.”
+            </p>
+        </div>
+
+        <div class="branding-footer">
+            <i class="fa-solid fa-star"></i>
+            <span>Exceptional stays begin with exceptional management.</span>
+        </div>
+
+    </section>
+
+
+    <!-- Right Side: Signup Form -->
+    <section class="signup-form-section">
+
+        <div class="signup-form-container">
+
+            <div class="form-heading">
+                <span class="section-label">ACCOUNT PORTAL</span>
+
+                <h2>Create  Account</h2>
+
+                <p>
+                    Enter your details to set up your account.
+                </p>
+            </div>
+
+
+            <form id="adminSignupForm">
+
+                <!-- Admin Name -->
+                <div class="form-group">
+                    <label for="adminName">Full Name</label>
+
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-user"></i>
+
+                        <input
+                                type="text"
+                                id="adminName"
+                                name="fullName"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required
+                        >
+                    </div>
+                </div>
+
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="adminEmail">Email Address</label>
+
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                                type="email"
+                                id="adminEmail"
+                                name="email"
+                                placeholder="admin@example.com"
+                                autocomplete="email"
+                                required
+                        >
+                    </div>
+                </div>
+
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="adminPassword">Password</label>
+
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                                type="password"
+                                id="adminPassword"
+                                name="password"
+                                placeholder="Create a strong password"
+                                autocomplete="new-password"
+                                required
+                        >
+
+                        <button
+                                type="button"
+                                class="toggle-password"
+                                data-target="adminPassword"
+                                aria-label="Show password"
+                        >
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Confirm Password -->
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                placeholder="Re-enter your password"
+                                autocomplete="new-password"
+                                required
+                        >
+
+                        <button
+                                type="button"
+                                class="toggle-password"
+                                data-target="confirmPassword"
+                                aria-label="Show confirm password"
+                        >
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Terms -->
+                <div class="form-options">
+                    <label class="terms-label">
+                        <input type="checkbox" id="agreeTerms" required>
+
+                        <span>
+                            I agree to the
+                            <a href="terms.html">Terms & Conditions</a>
+                        </span>
+                    </label>
+                </div>
+
+
+                <!-- Message -->
+                <p id="signupMessage"
+                   class="signup-message"
+                   aria-live="polite"></p>
+
+
+                <!-- Submit -->
+                <button type="submit" class="signup-button">
+                    Create Admin Account
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </form>
+
+
+            <!-- Sign In Link -->
+            <div class="form-divider">
+                <span>ALREADY HAVE AN ACCOUNT?</span>
+            </div>
+
+            <p class="login-link">
+                Already registered?
+                <a href="admin-login.html">Sign In</a>
+            </p>
+
+
+            <!-- Back to Website -->
+            <a href="../index.html" class="back-home">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Elysian website
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- Admin Signup JavaScript -->
+<script src="../javascript/admin-signup.js"></script>
+<script src="../javascript/auth-state.js"></script>
+
+</body>
+</html>

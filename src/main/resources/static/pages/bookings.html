@@ -1,0 +1,432 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings | ELYSIAN Hotel & Stay</title>
+
+    <link rel="stylesheet" href="../css/bookings.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                <i class="fa-solid fa-hotel"></i>
+            </div>
+
+            <div class="brand-text">
+                <h2>ELYSIAN</h2>
+                <span>HOTEL & STAY</span>
+            </div>
+
+            <button class="close-sidebar" id="closeSidebar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+        <div class="sidebar-label">MAIN MENU</div>
+
+        <nav class="sidebar-nav">
+
+            <a href="admin-dashboard.html" class="nav-link">
+                <i class="fa-solid fa-house"></i>
+                <span>Overview</span>
+            </a>
+
+            <a href="manage-rooms.html" class="nav-link">
+                <i class="fa-solid fa-bed"></i>
+                <span>Manage Rooms</span>
+            </a>
+            <a href="bookings.html" class="nav-link active">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Bookings</span>
+            </a>
+
+        </nav>
+
+        <!-- SIDEBAR BOTTOM -->
+        <div >
+            <button class="logout-button" id="logoutButton">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- SIDEBAR OVERLAY -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+                    <span class="page-eyebrow">ELYSIAN ADMINISTRATION</span>
+                    <h1>Bookings</h1>
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <div class="date-display">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span id="currentDate">Loading date...</span>
+                </div>
+
+
+
+                <div class="profile">
+
+                    <div class="profile-avatar" id="profileAvatar">
+                        A
+                    </div>
+
+                    <div class="profile-info">
+                        <strong id="adminName">Administrator</strong>
+                        <span>Hotel Admin</span>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- BOOKINGS SECTION -->
+        <section class="dashboard-section">
+
+            <!-- WELCOME -->
+            <div class="welcome-section">
+
+                <div>
+
+                    <span class="section-eyebrow">RESERVATION MANAGEMENT</span>
+
+                    <h2>
+                        All <span>Bookings</span>
+                    </h2>
+
+                    <p class="welcome-description">
+                        Manage and monitor all guest reservations
+                        at ELYSIAN Hotel & Stay.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOOKING STATISTICS -->
+            <section class="overview-section">
+
+                <div class="stats-grid">
+
+                    <!-- TOTAL BOOKINGS -->
+                    <div class="stat-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-icon rooms-icon">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </div>
+
+                            <span class="stat-tag">ALL TIME</span>
+
+                        </div>
+
+                        <p class="stat-label">Total Bookings</p>
+
+                        <h3 id="totalBookings">0</h3>
+
+                        <p class="stat-description">
+                            All reservation records
+                        </p>
+
+                    </div>
+
+
+                    <!-- CONFIRMED BOOKINGS -->
+                    <div class="stat-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-icon available-icon">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+
+                            <span class="stat-tag">CONFIRMED</span>
+
+                        </div>
+
+                        <p class="stat-label">Confirmed Bookings</p>
+
+                        <h3 id="confirmedBookings">0</h3>
+
+                        <p class="stat-description">
+                            Successfully confirmed reservations
+                        </p>
+
+                    </div>
+
+
+                    <!-- CANCELLED BOOKINGS -->
+                    <div class="stat-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-icon cancelled-icon">
+                                <i class="fa-solid fa-circle-xmark"></i>
+                            </div>
+
+                            <span class="stat-tag">CANCELLED</span>
+
+                        </div>
+
+                        <p class="stat-label">Cancelled Bookings</p>
+
+                        <h3 id="cancelledBookings">0</h3>
+
+                        <p class="stat-description">
+                            Cancelled reservation records
+                        </p>
+
+                    </div>
+
+
+                    <!-- COMPLETED BOOKINGS -->
+                    <div class="stat-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-icon completed-icon">
+                                <i class="fa-solid fa-flag-checkered"></i>
+                            </div>
+
+                            <span class="stat-tag">COMPLETED</span>
+
+                        </div>
+
+                        <p class="stat-label">Completed Bookings</p>
+
+                        <h3 id="completedBookings">0</h3>
+
+                        <p class="stat-description">
+                            Successfully completed stays
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- BOOKING HISTORY -->
+            <section class="panel booking-history-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <span class="section-eyebrow">RESERVATION RECORDS</span>
+                        <h3>Booking History</h3>
+                    </div>
+
+                    <span class="booking-count" id="bookingCount">
+                        0 Bookings
+                    </span>
+
+                </div>
+
+
+                <!-- SEARCH AND FILTERS -->
+                <div class="booking-toolbar">
+
+                    <div class="search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                                type="text"
+                                id="bookingSearch"
+                                placeholder="Search guest name or booking ID..."
+                        >
+
+                    </div>
+
+
+                    <div class="filter-box">
+
+                        <i class="fa-solid fa-filter"></i>
+
+                        <select id="bookingStatusFilter">
+
+                            <option value="ALL">All Status</option>
+                            <option value="CONFIRMED">Confirmed</option>
+                            <option value="CANCELLED">Cancelled</option>
+                            <option value="COMPLETED">Completed</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button class="secondary-button" id="resetFiltersButton">
+
+                        <i class="fa-solid fa-rotate-left"></i>
+                        Reset Filters
+
+                    </button>
+
+                </div>
+
+
+                <!-- BOOKING TABLE -->
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                        <tr>
+                            <th>BOOKING ID</th>
+                            <th>GUEST NAME</th>
+                            <th>ROOM</th>
+                            <th>CHECK-IN</th>
+                            <th>CHECK-OUT</th>
+                            <th>GUESTS</th>
+                            <th>AMOUNT</th>
+                            <th>BOOKING DATE</th>
+                            <th>STATUS</th>
+                            <th>ACTION</th>
+                        </tr>
+
+                        </thead>
+
+
+                        <tbody id="bookingsTableBody">
+
+                        <tr>
+                            <td colspan="10" class="empty-state">
+
+                                <i class="fa-solid fa-calendar-xmark"></i>
+
+                                <span>
+                                        Loading booking records...
+                                    </span>
+
+                            </td>
+                        </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- TABLE FOOTER -->
+                <div class="table-footer">
+
+                    <span id="tableResultText">
+                        Showing 0 bookings
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-shield-halved"></i>
+                        Secure Booking Records
+                    </span>
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 ELYSIAN Hotel & Stay. All rights reserved.
+            </p>
+
+            <span>
+                Designed for Excellence.
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- BOOKING DETAILS MODAL -->
+<div class="modal-overlay" id="bookingDetailsModal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <div>
+                <span class="section-eyebrow">RESERVATION INFORMATION</span>
+                <h3>Booking Details</h3>
+            </div>
+
+            <button class="modal-close" id="closeBookingModal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+        <div id="bookingDetailsContent">
+
+            <!-- Booking details will be loaded here by JavaScript -->
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="../javascript/bookings.js"></script>
+
+</body>
+</html>

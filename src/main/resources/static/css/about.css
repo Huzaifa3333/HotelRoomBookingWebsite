@@ -1,0 +1,585 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f7f8fa;
+       background-color: #e8e8e6;
+}
+
+.navbar {
+    width: 100%;
+    min-height: 72px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: #101c2c;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.brand-icon {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #f28a45;
+    border-radius: 50%;
+    color: #f28a45;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+}
+
+.brand-name {
+    color: #f5f6f8;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1.1;
+}
+
+.brand-name small {
+    display: block;
+    margin-top: 4px;
+    color: #aeb9c7;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    position: relative;
+    padding: 8px 0;
+    color: #c5ced8;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff6b1a;
+}
+
+.nav-links a.active {
+    color: #ff6b1a;
+}
+
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 17px;
+    height: 2px;
+    background: #ff6b1a;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    background: #ff6b1a;
+}
+
+.auth-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: #ff6b1a;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    box-shadow: 0 3px 10px rgba(255, 107, 26, 0.18);
+    transition: all 0.3s ease;
+}
+
+.auth-box:hover {
+    background: #e95b0c;
+    box-shadow: 0 5px 15px rgba(255, 107, 26, 0.3);
+    transform: translateY(-1px);
+}
+
+.auth-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    font-size: 17px;
+    line-height: 1;
+}
+
+.auth-text {
+    letter-spacing: 0;
+}
+
+
+
+
+
+/* About Hero */
+.about-hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    color: #ffffff;
+    background:
+        linear-gradient(90deg, rgba(28, 24, 21, 0.90), rgba(28, 24, 21, 0.30)),
+        url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+}
+
+.about-hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: #f28c45;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.about-hero h1 {
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.15;
+    margin: 18px 0;
+}
+
+.about-hero-content > p:not(.eyebrow) {
+    max-width: 540px;
+    color: #f2eee9;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.about-btn {
+    display: inline-block;
+    padding: 14px 25px;
+    background: #f28c45;
+    color: #241d18;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.about-btn:hover {
+    background: #ffab6b;
+    transform: translateY(-2px);
+}
+
+/* Our Story */
+.our-story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+    padding: 90px 8%;
+    background: #ffffff;
+}
+
+.story-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.story-content h2,
+.section-heading h2,
+.our-mission h2 {
+    color: #29231f;
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: 1.25;
+    margin: 15px 0 20px;
+}
+
+.story-content p:not(.eyebrow) {
+    color: #6c625b;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+.story-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #d96e2b;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid #f28c45;
+    padding-bottom: 6px;
+    transition: 0.3s;
+}
+
+.story-link:hover {
+    color: #a94712;
+}
+
+/* Why Choose Us */
+.why-us {
+    padding: 80px 8%;
+    background: #fbf5ef;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 45px;
+}
+
+.section-heading > p:last-child {
+    color: #6c625b;
+    line-height: 1.7;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    background: #ffffff;
+    padding: 35px 25px;
+    text-align: center;
+    border: 1px solid #f0e2d6;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    border-color: #f28c45;
+    box-shadow: 0 12px 30px rgba(65, 42, 25, 0.09);
+}
+
+.feature-icon {
+    display: inline-flex;
+    width: 55px;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff0e4;
+    color: #df762f;
+    font-size: 27px;
+}
+
+.feature-card h3 {
+    color: #29231f;
+    margin: 20px 0 12px;
+}
+
+.feature-card p {
+    color: #6c625b;
+    line-height: 1.8;
+}
+
+/* Our Mission */
+.our-mission {
+    padding: 85px 8%;
+    text-align: center;
+    background: #29231f;
+    color: #ffffff;
+}
+
+.our-mission h2 {
+    color: #ffffff;
+}
+
+.our-mission > p:not(.eyebrow) {
+    max-width: 650px;
+    margin: 0 auto 28px;
+    color: #e7ddd5;
+    line-height: 1.9;
+}
+
+
+/* ==============================
+   Tablet Responsive (768px - 1024px)
+============================== */
+
+@media (max-width: 1024px) {
+
+    .navbar {
+        padding: 0 4%;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .brand-name {
+        font-size: 18px;
+    }
+
+    .auth-box {
+        padding: 9px 13px;
+    }
+
+    .our-story {
+        gap: 30px;
+        padding: 70px 5%;
+    }
+
+    .why-us {
+        padding: 70px 5%;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-hero {
+        padding: 60px 6%;
+    }
+}
+
+
+/* ==============================
+   Mobile Responsive (Max 767px)
+============================== */
+
+@media (max-width: 767px) {
+
+    /* Navbar */
+    .navbar {
+        min-height: auto;
+        padding: 15px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .brand {
+        gap: 7px;
+    }
+
+    .brand-icon {
+        width: 31px;
+        height: 31px;
+        font-size: 20px;
+    }
+
+    .brand-name {
+        font-size: 17px;
+    }
+
+    .brand-name small {
+        font-size: 7px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 22px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .auth-box {
+        padding: 9px 13px;
+        font-size: 12px;
+    }
+
+
+    /* About Hero */
+    .about-hero {
+        min-height: 380px;
+        padding: 55px 6%;
+        background-position: center;
+    }
+
+    .about-hero-content {
+        max-width: 100%;
+    }
+
+    .eyebrow {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .about-hero h1 {
+        font-size: 36px;
+        margin: 15px 0;
+    }
+
+    .about-hero-content > p:not(.eyebrow) {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 22px;
+    }
+
+    .about-btn {
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+
+
+    /* Our Story */
+    .our-story {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 55px 6%;
+    }
+
+    .story-image img {
+        height: 280px;
+    }
+
+    .story-content h2,
+    .section-heading h2,
+    .our-mission h2 {
+        font-size: 29px;
+        margin: 12px 0 16px;
+    }
+
+    .story-content p:not(.eyebrow) {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+
+    /* Why Choose Us */
+    .why-us {
+        padding: 55px 6%;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .section-heading > p:last-child {
+        font-size: 14px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .feature-card {
+        padding: 28px 20px;
+    }
+
+    .feature-card h3 {
+        font-size: 18px;
+        margin: 15px 0 10px;
+    }
+
+    .feature-card p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+    /* Our Mission */
+    .our-mission {
+        padding: 60px 6%;
+    }
+
+    .our-mission > p:not(.eyebrow) {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}
+
+
+/* ==============================
+   Small Mobile (Max 480px)
+============================== */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 13px 4%;
+        gap: 12px;
+    }
+
+    .brand-name {
+        font-size: 15px;
+        letter-spacing: 1.5px;
+    }
+
+    .brand-name small {
+        letter-spacing: 2px;
+    }
+
+    .auth-box {
+        padding: 8px 10px;
+        gap: 6px;
+        font-size: 11px;
+    }
+
+    .auth-icon {
+        width: 15px;
+        height: 15px;
+        font-size: 15px;
+    }
+
+    .nav-links {
+        gap: 8px 17px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .about-hero {
+        min-height: 350px;
+        padding: 45px 5%;
+    }
+
+    .about-hero h1 {
+        font-size: 31px;
+    }
+
+    .story-image img {
+        height: 230px;
+    }
+
+    .story-content h2,
+    .section-heading h2,
+    .our-mission h2 {
+        font-size: 26px;
+    }
+
+    .feature-card {
+        padding: 25px 17px;
+    }
+}
+

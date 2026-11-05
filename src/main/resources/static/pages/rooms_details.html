@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Elysian Hotel & Stay</title>
+
+    <!-- Common Navbar CSS -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Room detail sPage CSS -->
+    <link rel="stylesheet" href="../css/rooms_details.css">
+
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Navbar Start -->
+<header class="navbar">
+
+    <a href="../index.html" class="brand">
+        <span class="brand-icon">E</span>
+
+        <span class="brand-name">
+                ELYSIAN
+                <small>HOTEL & STAY</small>
+            </span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="about.html" >About</a>
+        <a href="gallery.html" >Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <a href="admin-login.html?mode=user" class="auth-box" id="authLink">
+        <i class="fa-solid fa-user auth-icon"></i>
+        <span class="auth-text" id="authText">Login / Signup</span>
+    </a>
+
+</header>
+<!-- Navbar End -->
+
+
+
+<!-- Room Details Section Start -->
+<main class="room-details-page">
+
+    <!-- Room Details Hero -->
+    <section class="room-details-hero">
+        <div class="room-details-heading">
+            <span class="section-label">ELYSIAN HOTEL & STAY</span>
+            <h1>Your Perfect <span>Stay</span></h1>
+            <p>Discover your room, explore its comfort, and plan your next stay with us.</p>
+        </div>
+    </section>
+
+    <!-- Room Details Content -->
+    <section class="room-details-section">
+
+        <div class="room-details-container">
+
+            <!-- Room Information -->
+            <div class="room-details-content">
+
+                <div class="room-details-image">
+                    <img
+                            id="detailRoomImage"
+                            src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1400&q=85"
+                            alt="Hotel Room"
+                    >
+                    <span class="room-image-badge">ELYSIAN COLLECTION</span>
+                </div>
+
+                <div class="room-details-info">
+
+                    <span class="room-details-type" id="detailRoomType">
+                        DELUXE COLLECTION
+                    </span>
+
+                    <h2 id="detailRoomName">Deluxe Room</h2>
+
+                    <p class="room-details-description" id="detailRoomDescription">
+                        Enjoy a relaxing stay in a beautifully designed room
+                        with elegant interiors, comfortable bedding, and a
+                        peaceful atmosphere.
+                    </p>
+
+                    <div class="room-details-meta">
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-user-group"></i>
+                            <span id="detailRoomCapacity">2 Guests</span>
+                        </div>
+
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-bed"></i>
+                            <span id="detailRoomBed">Comfortable Bedding</span>
+                        </div>
+
+                        <div class="room-meta-item">
+                            <i class="fa-solid fa-wifi"></i>
+                            <span>Free Wi-Fi</span>
+                        </div>
+                    </div>
+
+                    <div class="room-details-divider"></div>
+
+                    <div class="room-facilities">
+                        <h3>Room Facilities</h3>
+
+                        <div class="facilities-grid">
+                            <div class="facility-item">
+                                <i class="fa-solid fa-wifi"></i>
+                                <span>Free Wi-Fi</span>
+                            </div>
+
+                            <div class="facility-item">
+                                <i class="fa-solid fa-snowflake"></i>
+                                <span>Air Conditioning</span>
+                            </div>
+
+                            <div class="facility-item">
+                                <i class="fa-solid fa-tv"></i>
+                                <span>Flat-Screen TV</span>
+                            </div>
+
+                            <div class="facility-item">
+                                <i class="fa-solid fa-mug-hot"></i>
+                                <span>Tea & Coffee</span>
+                            </div>
+
+                            <div class="facility-item">
+                                <i class="fa-solid fa-shower"></i>
+                                <span>Private Bathroom</span>
+                            </div>
+
+                            <div class="facility-item">
+                                <i class="fa-solid fa-bell-concierge"></i>
+                                <span>Room Service</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Booking Form -->
+            <aside class="room-booking-card">
+
+                <div class="booking-card-heading">
+                    <span>YOUR ELYSIAN EXPERIENCE</span>
+                    <h2>Reserve Your Stay</h2>
+                    <p>Complete the details below to request your booking.</p>
+                </div>
+
+                <div class="booking-price">
+                    <div>
+                        <span>Price per night</span>
+                        <h3>PKR <span id="detailRoomPrice">0</span></h3>
+                    </div>
+
+                    <i class="fa-solid fa-key"></i>
+                </div>
+
+                <form id="roomBookingForm">
+
+                    <div class="booking-form-group">
+                        <label for="bookingName">Full Name</label>
+                        <input
+                                type="text"
+                                id="bookingName"
+                                name="fullName"
+                                placeholder="Enter your full name"
+                                required
+                        >
+                    </div>
+
+                    <div class="booking-form-group">
+                        <label for="bookingEmail">Email Address</label>
+                        <input
+                                type="email"
+                                id="bookingEmail"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                        >
+                    </div>
+
+                    <div class="booking-form-group">
+                        <label for="bookingPhone">Phone Number</label>
+                        <input
+                                type="tel"
+                                id="bookingPhone"
+                                name="phone"
+                                placeholder="Enter your phone number"
+                                required
+                        >
+                    </div>
+
+                    <div class="booking-date-grid">
+
+                        <div class="booking-form-group">
+                            <label for="bookingCheckin">Check-in</label>
+                            <input
+                                    type="date"
+                                    id="bookingCheckin"
+                                    name="checkIn"
+                                    required
+                            >
+                        </div>
+
+                        <div class="booking-form-group">
+                            <label for="bookingCheckout">Check-out</label>
+                            <input
+                                    type="date"
+                                    id="bookingCheckout"
+                                    name="checkOut"
+                                    required
+                            >
+                        </div>
+
+                    </div>
+
+                    <div class="booking-form-group">
+                        <label for="bookingGuests">Number of Guests</label>
+                        <select id="bookingGuests" name="guests" required>
+                            <option value="1">1 Guest</option>
+                            <option value="2" selected>2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                        </select>
+                    </div>
+
+                    <div class="booking-total">
+                        <span>Estimated Total</span>
+                        <strong id="bookingTotal">PKR 0</strong>
+                    </div>
+
+                    <p class="booking-note">
+                        <i class="fa-solid fa-circle-info"></i>
+                        Final availability and booking confirmation will be checked by the hotel.
+                    </p>
+
+                    <button type="submit" class="booking-submit-btn">
+                        Request Booking
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <p id="bookingMessage" class="booking-message" aria-live="polite"></p>
+
+                </form>
+
+            </aside>
+
+        </div>
+    </section>
+
+</main>
+<!-- Room Details Section End -->
+
+
+
+<!-- ===== ELYSIAN HOTEL FOOTER ===== -->
+
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <!-- Main footer -->
+        <div class="footer-main">
+
+            <!-- Brand information -->
+            <div class="footer-brand">
+                <a href="../index.html" class="footer-logo">
+                    <span class="footer-logo-icon">E</span>
+                    <span class="footer-logo-text">
+                        ELYSIAN
+                        <small>HOTEL & STAY</small>
+                    </span>
+                </a>
+
+                <p class="footer-description">
+                    Discover a more thoughtful way to stay.
+                    Experience comfort, warm hospitality, and
+                    memorable moments at Elysian.
+                </p>
+
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="#" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Explore links -->
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <span class="footer-heading-line"></span>
+
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="rooms.html">Our Rooms</a></li>
+                    <li><a href="about.html">Why Elysian</a></li>
+                    <li><a href="gallery.html">Our Gallery</a></li>
+                </ul>
+            </div>
+
+            <!-- Guest services -->
+            <div class="footer-column">
+                <h3>Guest Services</h3>
+                <span class="footer-heading-line"></span>
+
+                <ul>
+                    <li><a href="rooms.html">Book a Stay</a></li>
+                    <li><a href="rooms.html">Room Details</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html">Frequently Asked Questions</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact information -->
+            <div class="footer-column footer-contact" id="contact">
+                <h3>Get in Touch</h3>
+                <span class="footer-heading-line"></span>
+
+                <p class="footer-contact-intro">
+                    Have a question? We'd love to hear from you.
+                </p>
+
+                <a href="mailto:info@elysianhotel.com" class="footer-contact-item">
+                    <span class="footer-contact-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </span>
+                    <span>huzaifaawaan970@gmail.com</span>
+                </a>
+
+                <a href="tel:+923001234567" class="footer-contact-item">
+                    <span class="footer-contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </span>
+                    <span>+92 3232892925</span>
+                </a>
+
+                <div class="footer-contact-item">
+                    <span class="footer-contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </span>
+                    <span>Pakistan</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Booking banner -->
+        <div class="footer-booking-banner">
+            <div>
+                <span class="footer-banner-label">YOUR NEXT ESCAPE STARTS HERE</span>
+                <h3>Make Yourself at Home.</h3>
+                <p>Your perfect stay is just a reservation away.</p>
+            </div>
+
+            <a href="rooms.html" class="footer-booking-btn">
+                Explore Our Rooms
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 Elysian Hotel & Stay.
+                All rights reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <span></span>
+                <a href="terms.html">Terms & Conditions</a>
+            </div>
+
+            <a href="#" class="footer-back-top">
+                Back to top
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </div>
+
+    </div>
+</footer>
+<script src="../javascript/rooms_details.js"></script>
+<script src="../javascript/auth-state.js"></script>
+</body>
+</html>

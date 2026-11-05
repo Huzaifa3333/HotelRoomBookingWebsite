@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Booking Confirmed | Elysian Hotel & Stay</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/booking-confirmation.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="../index.html" class="brand">
+        <span class="brand-icon">E</span>
+        <span class="brand-name">
+            ELYSIAN
+            <small>HOTEL & STAY</small>
+        </span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <a href="admin-login.html?mode=user" class="auth-box" id="authLink">
+        <i class="fa-solid fa-user auth-icon"></i>
+        <span class="auth-text" id="authText">Login / Signup</span>
+    </a>
+</header>
+
+<main class="confirmation-page">
+
+    <div class="confirmation-container">
+
+        <div class="confirmation-top">
+            <div class="success-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <span class="confirmation-label">ELYSIAN HOTEL & STAY</span>
+
+            <h1>Your Stay Is <span>Confirmed.</span></h1>
+
+            <p>
+                Thank you for choosing Elysian. Your booking has been
+                successfully submitted, and your stay details are below.
+            </p>
+        </div>
+
+        <section class="confirmation-card">
+
+            <div class="card-header">
+                <div>
+                    <span class="small-label">BOOKING SUMMARY</span>
+                    <h2>Your Reservation</h2>
+                </div>
+
+                <span class="status-badge">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span id="bookingStatus">Confirmed</span>
+                </span>
+            </div>
+
+            <div class="booking-reference">
+                <div class="reference-icon">
+                    <i class="fa-solid fa-receipt"></i>
+                </div>
+
+                <div>
+                    <span>BOOKING REFERENCE</span>
+                    <strong id="bookingId">Loading...</strong>
+                </div>
+            </div>
+
+            <div class="confirmation-divider"></div>
+
+            <div class="booking-details-grid">
+
+                <div class="detail-item">
+                    <span><i class="fa-solid fa-bed"></i> Room Number</span>
+                    <strong id="roomNumber">—</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span><i class="fa-solid fa-hotel"></i> Room Type</span>
+                    <strong id="roomType">—</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span><i class="fa-regular fa-calendar-check"></i> Check-in</span>
+                    <strong id="checkInDate">—</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span><i class="fa-regular fa-calendar"></i> Check-out</span>
+                    <strong id="checkOutDate">—</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span><i class="fa-solid fa-moon"></i> Duration</span>
+                    <strong id="stayDuration">—</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span><i class="fa-solid fa-users"></i> Guests</span>
+                    <strong id="guestCount">—</strong>
+                </div>
+
+            </div>
+
+            <div class="confirmation-divider"></div>
+
+            <div class="total-row">
+                <div>
+                    <span>Total Stay Amount</span>
+                    <p>As recorded in your reservation</p>
+                </div>
+
+                <strong id="totalPrice">PKR —</strong>
+            </div>
+
+            <div class="confirmation-notice">
+                <i class="fa-solid fa-circle-info"></i>
+                <p>
+                    Keep your booking reference safe. You can use it as a
+                    reference when contacting the hotel about your reservation.
+                </p>
+            </div>
+
+            <div class="confirmation-actions">
+                <button type="button" id="downloadReceipt" class="primary-action">
+                    <i class="fa-solid fa-download"></i>
+                    Download Booking Receipt
+                </button>
+
+                <a href="../index.html" class="secondary-action">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back to Home
+                </a>
+            </div>
+
+        </section>
+
+        <p class="confirmation-footer">
+            <i class="fa-solid fa-heart"></i>
+            We look forward to welcoming you to Elysian.
+        </p>
+
+    </div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="../javascript/booking-confirmation.js"></script>
+<script src="../javascript/auth-state.js"></script>
+
+</body>
+</html>

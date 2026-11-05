@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Elysian Hotel & Stay</title>
+
+    <!-- Common Navbar CSS -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Contact Page CSS -->
+    <link rel="stylesheet" href="../css/contact.css">
+
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Navbar Start -->
+<header class="navbar">
+
+    <a href="../index.html" class="brand">
+        <span class="brand-icon">E</span>
+
+        <span class="brand-name">
+                ELYSIAN
+                <small>HOTEL & STAY</small>
+            </span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="about.html" >About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+    <a href="admin-login.html?mode=user" class="auth-box" id="authLink">
+        <i class="fa-solid fa-user auth-icon"></i>
+        <span class="auth-text" id="authText">Login / Signup</span>
+    </a>
+
+</header>
+<!-- Navbar End -->
+
+
+
+
+<!-- Contact Hero -->
+<section class="contact-hero">
+    <div class="hero-content">
+        <span class="hero-label">WE'RE HERE FOR YOU</span>
+
+        <h1>Let's Start a <span>Conversation.</span></h1>
+
+        <p>
+            Whether you're planning your next getaway or need a little
+            assistance, we're here to make your ELYSIAN experience effortless.
+        </p>
+    </div>
+</section>
+
+
+<!-- Contact Departments -->
+<section class="contact-departments">
+
+    <div class="section-heading">
+        <span class="section-label">GET IN TOUCH</span>
+        <h2>How Can We <span>Help You?</span></h2>
+        <p>
+            Find the right team for your questions. We're always happy to help.
+        </p>
+    </div>
+
+    <div class="department-grid">
+
+        <!-- Booking Support -->
+        <div class="department-card">
+            <div class="card-top">
+                <div class="department-icon">
+                    <span>01</span>
+                </div>
+                <span class="card-arrow">↗</span>
+            </div>
+
+            <h3>Booking Support</h3>
+
+            <p>
+                Need help with a reservation, room availability,
+                or your upcoming stay? Our team is ready to assist.
+            </p>
+
+            <a href="mailto:support@elysian.com" class="contact-link">
+                Contact our team <span>→</span>
+            </a>
+        </div>
+
+
+        <!-- Hotelier Support -->
+        <div class="department-card">
+            <div class="card-top">
+                <div class="department-icon">
+                    <span>02</span>
+                </div>
+                <span class="card-arrow">↗</span>
+            </div>
+
+            <h3>Hotelier Support</h3>
+
+            <p>
+                Own a property? Connect with us to explore listing
+                opportunities and grow your hospitality business.
+            </p>
+
+            <a href="mailto:hoteliers@elysian.com" class="contact-link">
+                Partner with us <span>→</span>
+            </a>
+        </div>
+
+
+        <!-- Investor Relations -->
+        <div class="department-card">
+            <div class="card-top">
+                <div class="department-icon">
+                    <span>03</span>
+                </div>
+                <span class="card-arrow">↗</span>
+            </div>
+
+            <h3>Investor Relations</h3>
+
+            <p>
+                Interested in our vision? Get in touch to discuss
+                business opportunities and future collaborations.
+            </p>
+
+            <a href="mailto:invest@elysian.com" class="contact-link">
+                Explore opportunities <span>→</span>
+            </a>
+        </div>
+
+
+        <!-- Agents & Partnerships -->
+        <div class="department-card">
+            <div class="card-top">
+                <div class="department-icon">
+                    <span>04</span>
+                </div>
+                <span class="card-arrow">↗</span>
+            </div>
+
+            <h3>Agents & Partnerships</h3>
+
+            <p>
+                Let's create something meaningful together.
+                Contact us for travel partnerships and corporate bookings.
+            </p>
+
+            <a href="mailto:partners@elysian.com" class="contact-link">
+                Work with us <span>→</span>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Message Section -->
+<section class="message-section">
+
+    <div class="message-intro">
+        <span class="section-label">SEND US A MESSAGE</span>
+
+        <h2>We're Listening.<br><span>Let's Talk.</span></h2>
+
+        <p>
+            Have a question or a special request?
+            Tell us a little about it, and we'll help you find the right way forward.
+        </p>
+
+        <div class="message-note">
+            <span class="note-line"></span>
+            <p>Every great journey begins with a conversation.</p>
+        </div>
+    </div>
+
+
+    <div class="message-form-wrapper">
+
+        <form class="contact-form" id="contactForm">
+
+            <div class="form-heading">
+                <h3>Send a Message</h3>
+                <p>Fill in the details below to get started.</p>
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="fullName">Your Name</label>
+                    <input
+                            type="text"
+                            id="fullName"
+                            name="name"
+                            placeholder="Enter your full name"
+                            required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            required
+                    >
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="phone">Phone Number <span>(Optional)</span></label>
+                    <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department</label>
+
+                    <select id="department" name="department" required>
+                        <option value="" disabled selected>
+                            Select a department
+                        </option>
+                        <option value="Booking Support">Booking Support</option>
+                        <option value="Hotelier Support">Hotelier Support</option>
+                        <option value="Investor Relations">Investor Relations</option>
+                        <option value="Agents & Partnerships">Agents & Partnerships</option>
+                        <option value="Other">Something Else</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+                <label for="message">Your Message</label>
+
+                <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Tell us how we can help you..."
+                        required
+                ></textarea>
+            </div>
+
+
+            <button type="submit" class="submit-button">
+                Send Your Message <span>→</span>
+            </button>
+
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+
+            <p class="privacy-note">
+                Your information will only be used to respond to your enquiry.
+            </p>
+
+        </form>
+
+    </div>
+</section>
+
+
+<!-- Final Call To Action -->
+<section class="contact-cta">
+
+    <div class="cta-content">
+        <span class="section-label">YOUR NEXT CHAPTER AWAITS</span>
+
+        <h2>Somewhere Beautiful<br>Is <span>Waiting for You.</span></h2>
+
+        <p>
+            Discover welcoming spaces, memorable stays, and places
+            worth travelling for. Your next experience starts here.
+        </p>
+
+        <a href="../index.html" class="cta-button">
+            Explore ELYSIAN <span>→</span>
+        </a>
+    </div>
+
+    <div class="cta-decoration">
+        <span class="decoration-circle circle-one"></span>
+        <span class="decoration-circle circle-two"></span>
+        <span class="decoration-text">E</span>
+    </div>
+
+</section>
+
+
+<!-- ===== ELYSIAN HOTEL FOOTER ===== -->
+
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <!-- Main footer -->
+        <div class="footer-main">
+
+            <!-- Brand information -->
+            <div class="footer-brand">
+                <a href="../index.html" class="footer-logo">
+                    <span class="footer-logo-icon">E</span>
+                    <span class="footer-logo-text">
+                        ELYSIAN
+                        <small>HOTEL & STAY</small>
+                    </span>
+                </a>
+
+                <p class="footer-description">
+                    Discover a more thoughtful way to stay.
+                    Experience comfort, warm hospitality, and
+                    memorable moments at Elysian.
+                </p>
+
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="#" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Explore links -->
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <span class="footer-heading-line"></span>
+
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="rooms.html">Our Rooms</a></li>
+                    <li><a href="about.html">Why Elysian</a></li>
+                    <li><a href="gallery.html">Our Gallery</a></li>
+                </ul>
+            </div>
+
+            <!-- Guest services -->
+            <div class="footer-column">
+                <h3>Guest Services</h3>
+                <span class="footer-heading-line"></span>
+
+                <ul>
+                    <li><a href="rooms.html">Book a Stay</a></li>
+                    <li><a href="rooms.html">Room Details</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html">Frequently Asked Questions</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact information -->
+            <div class="footer-column footer-contact" id="contact">
+                <h3>Get in Touch</h3>
+                <span class="footer-heading-line"></span>
+
+                <p class="footer-contact-intro">
+                    Have a question? We'd love to hear from you.
+                </p>
+
+                <a href="mailto:info@elysianhotel.com" class="footer-contact-item">
+                    <span class="footer-contact-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </span>
+                    <span>huzaifaawaan970@gmail.com</span>
+                </a>
+
+                <a href="tel:+923001234567" class="footer-contact-item">
+                    <span class="footer-contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </span>
+                    <span>+92 3232892925</span>
+                </a>
+
+                <div class="footer-contact-item">
+                    <span class="footer-contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </span>
+                    <span>Pakistan</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Booking banner -->
+        <div class="footer-booking-banner">
+            <div>
+                <span class="footer-banner-label">YOUR NEXT ESCAPE STARTS HERE</span>
+                <h3>Make Yourself at Home.</h3>
+                <p>Your perfect stay is just a reservation away.</p>
+            </div>
+
+            <a href="rooms.html" class="footer-booking-btn">
+                Explore Our Rooms
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 Elysian Hotel & Stay.
+                All rights reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <span></span>
+                <a href="terms.html">Terms & Conditions</a>
+            </div>
+
+            <a href="#" class="footer-back-top">
+                Back to top
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </div>
+
+    </div>
+</footer>
+<script src="../javascript/auth-state.js"></script>
+<script src="../javascript/contact.js"></script>
+
+
+</body>
+</html>

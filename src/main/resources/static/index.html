@@ -1,0 +1,633 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELYSIAN Hotel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="navbar">
+    <a href="#" class="brand">
+        <span class="brand-icon">E</span>
+        <span class="brand-name">ELYSIAN<small>HOTEL & STAY</small></span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="/" class="active">Home</a>
+        <a href="pages/rooms.html">Rooms</a>
+        <a href="pages/about.html">About</a>
+        <a href="pages/gallery.html">Gallery</a>
+        <a href="pages/contact.html">Contact</a>
+    </nav>
+
+
+    <a href="pages/admin-login.html?mode=user" class="auth-box" id="authLink">
+        <i class="fa-solid fa-user auth-icon"></i>
+        <span class="auth-text" id="authText">Login / Signup</span>
+    </a>
+
+</header>
+
+
+<section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <div class="hero-tag">
+            <span class="tag-dot"></span>
+            STAYS ACROSS PAKISTAN
+        </div>
+
+        <h1>
+            Discover Your<br>
+            <span>Perfect Stay.</span>
+        </h1>
+
+        <p>
+            From luxury hotels to peaceful resorts, discover beautiful
+            places to stay across Pakistan. Find comfort, explore new
+            destinations, and make every journey memorable.
+        </p>
+
+        <div class="hero-actions">
+            <a href="pages/rooms.html" class="hero-btn">
+                Explore Stays <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <div class="hero-location">
+                <span class="location-icon">⌖</span>
+                <div class="location-text">
+                    <strong>Beautiful Pakistan</strong>
+                    <small>One stay at a time</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="featured-rooms" id="rooms">
+    <div class="rooms-header">
+        <div class="rooms-heading">
+            <span class="section-tag">OUR COLLECTION</span>
+            <h2>Featured <span>Rooms</span></h2>
+            <p>Discover thoughtfully designed spaces for your perfect stay.</p>
+        </div>
+
+        <a href="pages/rooms.html" class="view-all-btn">
+            View All Rooms <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+    </div>
+
+    <div class="rooms-grid">
+        <a href="pages/rooms_details.html" class="room-card">
+            <div class="room-image">
+                <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=85" alt="Deluxe hotel room">
+                <span class="room-badge">POPULAR</span>
+                <span class="room-image-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </div>
+            <div class="room-info">
+                <div class="room-type"><i class="fa-solid fa-bed"></i> DELUXE COLLECTION</div>
+                <h3>Deluxe Room</h3>
+                <p>A comfortable retreat with elegant interiors and a relaxing atmosphere.</p>
+                <div class="room-features">
+                    <span><i class="fa-solid fa-user-group"></i> 2 Guests</span>
+                    <span><i class="fa-solid fa-expand"></i> 320 sq ft</span>
+                </div>
+                <div class="room-bottom">
+                    <div class="room-price"><strong>Rs. 8,000</strong><span>/ night</span></div>
+                    <span class="room-link">Explore Room <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </a>
+
+        <a href="pages/rooms_details.html" class="room-card">
+            <div class="room-image">
+                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=85" alt="Executive hotel suite">
+                <span class="room-image-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </div>
+            <div class="room-info">
+                <div class="room-type"><i class="fa-solid fa-crown"></i> EXECUTIVE COLLECTION</div>
+                <h3>Premium Room</h3>
+                <p>Extra space and sophisticated comfort for a memorable experience.</p>
+                <div class="room-features">
+                    <span><i class="fa-solid fa-user-group"></i> 3 Guests</span>
+                    <span><i class="fa-solid fa-expand"></i> 480 sq ft</span>
+                </div>
+                <div class="room-bottom">
+                    <div class="room-price"><strong>Rs. 15,000</strong><span>/ night</span></div>
+                    <span class="room-link">Explore Room <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </a>
+
+        <a href="pages/rooms_details.html" class="room-card">
+            <div class="room-image">
+                <img src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?auto=format&fit=crop&w=900&q=85" alt="Twin bed hotel room">
+                <span class="room-image-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </div>
+            <div class="room-info">
+                <div class="room-type"><i class="fa-solid fa-bed"></i> CLASSIC COLLECTION</div>
+                <h3>Classic King Room</h3>
+                <p>A welcoming room with twin beds, ideal for friends or travel partners.</p>
+                <div class="room-features">
+                    <span><i class="fa-solid fa-user-group"></i> 2 Guests</span>
+                    <span><i class="fa-solid fa-expand"></i> 300 sq ft</span>
+                </div>
+                <div class="room-bottom">
+                    <div class="room-price"><strong>Rs. 7,000</strong><span>/ night</span></div>
+                    <span class="room-link">Explore Room <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </a>
+
+        <a href="pages/rooms_details.html" class="room-card">
+            <div class="room-image">
+                <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=900&q=85" alt="Premium hotel bedroom">
+                <span class="room-badge">PREMIUM</span>
+                <span class="room-image-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </div>
+            <div class="room-info">
+                <div class="room-type"><i class="fa-solid fa-star"></i> SIGNATURE COLLECTION</div>
+                <h3>Premium Room</h3>
+                <p>Beautiful design and upgraded comfort for a refined hotel stay.</p>
+                <div class="room-features">
+                    <span><i class="fa-solid fa-user-group"></i> 2 Guests</span>
+                    <span><i class="fa-solid fa-expand"></i> 380 sq ft</span>
+                </div>
+                <div class="room-bottom">
+                    <div class="room-price"><strong>Rs. 11,000</strong><span>/ night</span></div>
+                    <span class="room-link">Explore Room <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </a>
+
+        <a href="pages/rooms_details.html" class="room-card">
+            <div class="room-image">
+                <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=85" alt="Family hotel room">
+                <span class="room-image-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </div>
+            <div class="room-info">
+                <div class="room-type"><i class="fa-solid fa-people-roof"></i> FAMILY COLLECTION</div>
+                <h3>Family Suite</h3>
+                <p>A spacious setting designed for quality time with your loved ones.</p>
+                <div class="room-features">
+                    <span><i class="fa-solid fa-user-group"></i> 4 Guests</span>
+                    <span><i class="fa-solid fa-expand"></i> 520 sq ft</span>
+                </div>
+                <div class="room-bottom">
+                    <div class="room-price"><strong>Rs. 13,000</strong><span>/ night</span></div>
+                    <span class="room-link">Explore Room <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </a>
+
+        <a href="pages/rooms_details.html" class="room-card">
+            <div class="room-image">
+                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=85" alt="Luxury suite interior">
+                <span class="room-image-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </div>
+            <div class="room-info">
+                <div class="room-type"><i class="fa-solid fa-gem"></i> LUXURY COLLECTION</div>
+                <h3>Luxury Suite</h3>
+                <p>An elevated stay with premium interiors and generous living space.</p>
+                <div class="room-features">
+                    <span><i class="fa-solid fa-user-group"></i> 3 Guests</span>
+                    <span><i class="fa-solid fa-expand"></i> 560 sq ft</span>
+                </div>
+                <div class="room-bottom">
+                    <div class="room-price"><strong>Rs. 20,000</strong><span>/ night</span></div>
+                    <span class="room-link">Explore Room <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </a>
+
+        <a href="pages/rooms_details.html" class="room-card">
+            <div class="room-image">
+                <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=900&q=85" alt="Hotel room with elegant decor">
+                <span class="room-image-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </div>
+            <div class="room-info">
+                <div class="room-type"><i class="fa-solid fa-leaf"></i> COMFORT COLLECTION</div>
+                <h3>Luxury Suite</h3>
+                <p>A peaceful space with thoughtful details for a restful night's sleep.</p>
+                <div class="room-features">
+                    <span><i class="fa-solid fa-user-group"></i> 2 Guests</span>
+                    <span><i class="fa-solid fa-expand"></i> 340 sq ft</span>
+                </div>
+                <div class="room-bottom">
+                    <div class="room-price"><strong>Rs. 9,000</strong><span>/ night</span></div>
+                    <span class="room-link">Explore Room <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </a>
+
+        <a href="pages/rooms_details.html" class="room-card">
+            <div class="room-image">
+                <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=900&q=85" alt="Elegant hotel room">
+                <span class="room-badge">EXCLUSIVE</span>
+                <span class="room-image-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </div>
+            <div class="room-info">
+                <div class="room-type"><i class="fa-solid fa-sparkles"></i> EXCLUSIVE COLLECTION</div>
+                <h3>Deluxe King Room</h3>
+                <p>Distinctive elegance and spacious comfort for a special occasion.</p>
+                <div class="room-features">
+                    <span><i class="fa-solid fa-user-group"></i> 4 Guests</span>
+                    <span><i class="fa-solid fa-expand"></i> 650 sq ft</span>
+                </div>
+                <div class="room-bottom">
+                    <div class="room-price"><strong>Rs. 25,000</strong><span>/ night</span></div>
+                    <span class="room-link">Explore Room <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
+
+
+
+<section class="why-choose-us" id="why-us">
+    <div class="why-container">
+
+        <div class="why-header">
+            <div class="why-heading">
+                <span class="why-tag">THE ELYSIAN EXPERIENCE</span>
+
+                <h2>
+                    More Than a Stay.<br>
+                    <span>A Feeling of Home.</span>
+                </h2>
+
+                <p>
+                    Every detail is thoughtfully designed to make your stay
+                    comfortable, peaceful, and truly memorable.
+                </p>
+            </div>
+
+            <div class="why-side-note">
+                <span class="why-side-number">01 — 04</span>
+                <span class="why-side-text">THE ART OF HOSPITALITY</span>
+            </div>
+        </div>
+
+        <div class="why-grid">
+
+            <article class="why-card">
+                <div class="why-card-top">
+                    <span class="why-number">01</span>
+                    <div class="why-icon">
+                        <i class="fa-solid fa-bed"></i>
+                    </div>
+                </div>
+
+                <h3>Thoughtful Comfort</h3>
+                <p>
+                    Relax in beautifully designed spaces created for
+                    comfort, rest, and a peaceful night's sleep.
+                </p>
+
+                <span class="why-card-line"></span>
+            </article>
+
+            <article class="why-card">
+                <div class="why-card-top">
+                    <span class="why-number">02</span>
+                    <div class="why-icon">
+                        <i class="fa-solid fa-concierge-bell"></i>
+                    </div>
+                </div>
+
+                <h3>Personalised Service</h3>
+                <p>
+                    Enjoy attentive hospitality that puts your comfort
+                    and experience at the heart of every stay.
+                </p>
+
+                <span class="why-card-line"></span>
+            </article>
+
+            <article class="why-card">
+                <div class="why-card-top">
+                    <span class="why-number">03</span>
+                    <div class="why-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                </div>
+
+                <h3>Peace of Mind</h3>
+                <p>
+                    Settle in and unwind in a welcoming environment
+                    where your privacy and peace matter.
+                </p>
+
+                <span class="why-card-line"></span>
+            </article>
+
+            <article class="why-card">
+                <div class="why-card-top">
+                    <span class="why-number">04</span>
+                    <div class="why-icon">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                </div>
+
+                <h3>Exceptional Value</h3>
+                <p>
+                    Discover a thoughtful balance of quality, comfort,
+                    and value for a stay worth remembering.
+                </p>
+
+                <span class="why-card-line"></span>
+            </article>
+
+        </div>
+
+        <div class="why-footer">
+            <span>YOUR COMFORT, OUR SIGNATURE.</span>
+            <span class="why-footer-mark">
+                E <span>LYSIAN</span>
+            </span>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<!-- ===== ELYSIAN HOTEL GALLERY ===== -->
+
+<section class="hotel-gallery" id="gallery">
+    <div class="gallery-container">
+
+        <div class="gallery-header">
+            <div class="gallery-heading">
+                <span class="gallery-tag">A GLIMPSE OF ELYSIAN</span>
+
+                <h2>
+                    Experience the Art<br>
+                    <span>of Staying.</span>
+                </h2>
+
+                <p>
+                    Explore the spaces, thoughtful details, and beautiful
+                    surroundings that make every stay feel extraordinary.
+                </p>
+            </div>
+
+            <div class="gallery-side">
+                <span class="gallery-count">01 / 05</span>
+                <span class="gallery-side-text">MOMENTS WORTH REMEMBERING</span>
+            </div>
+        </div>
+
+        <div class="gallery-grid">
+
+            <!-- Main hotel room image -->
+            <a href="pages/rooms.html"
+               class="gallery-item gallery-main"
+               aria-label="Explore our luxury hotel rooms">
+
+                <img
+                        src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1400&q=85"
+                        alt="Elegant luxury hotel bedroom"
+                        loading="lazy"
+                >
+
+                <div class="gallery-image-overlay"></div>
+
+                <div class="gallery-image-content">
+                    <span class="gallery-image-label">01 — THE ROOMS</span>
+                    <h3>Rest in Refined Comfort</h3>
+                    <span class="gallery-explore">
+                        EXPLORE ROOMS
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Hotel lobby -->
+            <div class="gallery-item gallery-lobby">
+                <img
+                        src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=85"
+                        alt="Beautiful luxury hotel and pool"
+                        loading="lazy"
+                >
+
+                <div class="gallery-image-overlay"></div>
+
+                <div class="gallery-image-content">
+                    <span class="gallery-image-label">02 — THE AMBIENCE</span>
+                    <h3>A Warm Welcome</h3>
+                </div>
+            </div>
+
+            <!-- Dining -->
+            <div class="gallery-item gallery-dining">
+                <img
+                        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85"
+                        alt="Elegant fine dining experience"
+                        loading="lazy"
+                >
+
+                <div class="gallery-image-overlay"></div>
+
+                <div class="gallery-image-content">
+                    <span class="gallery-image-label">03 — DINING</span>
+                    <h3>Moments Around the Table</h3>
+                </div>
+            </div>
+
+            <!-- Pool and relaxation -->
+            <div class="gallery-item gallery-pool">
+                <img
+                        src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=85"
+                        alt="Resort pool surrounded by a relaxing atmosphere"
+                        loading="lazy"
+                >
+
+                <div class="gallery-image-overlay"></div>
+
+                <div class="gallery-image-content">
+                    <span class="gallery-image-label">04 — UNWIND</span>
+                    <h3>Find Your Peace</h3>
+                </div>
+            </div>
+
+            <!-- Interior details -->
+            <div class="gallery-item gallery-details">
+                <img
+                        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85"
+                        alt="Beautifully designed luxury interior"
+                        loading="lazy"
+                >
+
+                <div class="gallery-image-overlay"></div>
+
+                <div class="gallery-image-content">
+                    <span class="gallery-image-label">05 — THE DETAILS</span>
+                    <h3>Beauty in Every Detail</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="gallery-footer">
+            <span>DISCOVER YOUR OWN ELYSIAN MOMENT.</span>
+
+            <a href="pages/rooms.html" class="gallery-view-btn">
+                Discover Your Stay
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<!-- ===== ELYSIAN HOTEL FOOTER ===== -->
+
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <!-- Main footer -->
+        <div class="footer-main">
+
+            <!-- Brand information -->
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <span class="footer-logo-icon">E</span>
+                    <span class="footer-logo-text">
+                        ELYSIAN
+                        <small>HOTEL & STAY</small>
+                    </span>
+                </a>
+
+                <p class="footer-description">
+                    Discover a more thoughtful way to stay.
+                    Experience comfort, warm hospitality, and
+                    memorable moments at Elysian.
+                </p>
+
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="#" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Explore links -->
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <span class="footer-heading-line"></span>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/rooms.html">Our Rooms</a></li>
+                    <li><a href="pages/about.html">Why Elysian</a></li>
+                    <li><a href="pages/gallery.html">Our Gallery</a></li>
+                </ul>
+            </div>
+
+            <!-- Guest services -->
+            <div class="footer-column">
+                <h3>Guest Services</h3>
+                <span class="footer-heading-line"></span>
+
+                <ul>
+                    <li><a href="pages/rooms.html">Book a Stay</a></li>
+                    <li><a href="pages/rooms.html">Room Details</a></li>
+                    <li><a href="pages/contact.html">Contact Us</a></li>
+                    <li><a href="pages/contact.html">Frequently Asked Questions</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact information -->
+            <div class="footer-column footer-contact" id="contact">
+                <h3>Get in Touch</h3>
+                <span class="footer-heading-line"></span>
+
+                <p class="footer-contact-intro">
+                    Have a question? We'd love to hear from you.
+                </p>
+
+                <a href="mailto:info@elysianhotel.com" class="footer-contact-item">
+                    <span class="footer-contact-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </span>
+                    <span>huzaifaawaan970@gmail.com</span>
+                </a>
+
+                <a href="tel:+923001234567" class="footer-contact-item">
+                    <span class="footer-contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </span>
+                    <span>+92 3232892925</span>
+                </a>
+
+                <div class="footer-contact-item">
+                    <span class="footer-contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </span>
+                    <span>Pakistan</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Booking banner -->
+        <div class="footer-booking-banner">
+            <div>
+                <span class="footer-banner-label">YOUR NEXT ESCAPE STARTS HERE</span>
+                <h3>Make Yourself at Home.</h3>
+                <p>Your perfect stay is just a reservation away.</p>
+            </div>
+
+            <a href="pages/rooms.html" class="footer-booking-btn">
+                Explore Our Rooms
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 Elysian Hotel & Stay.
+                All rights reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <span></span>
+                <a href="terms.html">Terms & Conditions</a>
+            </div>
+
+            <a href="#" class="footer-back-top">
+                Back to top
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </div>
+
+    </div>
+</footer>
+
+<script src="javascript/auth-state.js"></script>
+<script src="javascript/home-room-click.js"></script>
+</body>
+</html>

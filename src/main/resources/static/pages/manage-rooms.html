@@ -1,0 +1,449 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Rooms | ELYSIAN Hotel & Stay</title>
+
+    <link rel="stylesheet" href="../css/manage-rooms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">
+                <i class="fa-solid fa-hotel"></i>
+            </div>
+
+            <div class="brand-text">
+                <h2>ELYSIAN</h2>
+                <span>HOTEL & STAY</span>
+            </div>
+
+            <button class="close-sidebar" id="closeSidebar" aria-label="Close sidebar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="sidebar-label">MAIN MENU</div>
+
+        <nav class="sidebar-nav">
+            <a href="admin-dashboard.html#overview" class="nav-link">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Overview</span>
+            </a>
+
+            <a href="manage-rooms.html" class="nav-link active">
+                <i class="fa-solid fa-bed"></i>
+                <span>Manage Rooms</span>
+            </a>
+
+            <a href="bookings.html" class="nav-link">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Bookings</span>
+            </a>
+
+        </nav>
+            <div>
+            <button class="logout-button" id="logoutButton">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </button>
+        </div>
+
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Topbar -->
+        <header class="topbar">
+
+            <div class="topbar-left">
+                <button class="menu-toggle" id="menuToggle" aria-label="Open sidebar">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+                    <span class="page-eyebrow">HOTEL MANAGEMENT</span>
+                    <h1>Room Management</h1>
+                </div>
+            </div>
+
+            <div class="topbar-right">
+                <div class="date-display">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span id="currentDate">Today</span>
+                </div>
+
+                <div class="profile">
+                    <div class="profile-avatar" id="profileAvatar">A</div>
+
+                    <div class="profile-info">
+                        <strong id="adminName">Administrator</strong>
+                        <span id="adminRole">Hotel Admin</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </header>
+
+        <section class="dashboard-section">
+
+            <!-- Welcome / Heading -->
+            <div class="welcome-section">
+                <div>
+                    <p class="section-eyebrow">YOUR ACCOMMODATION</p>
+                    <h2>Manage Your Rooms.</h2>
+                    <p class="welcome-description">
+                        Monitor room availability, update room information
+                        and explore complete booking history.
+                    </p>
+                </div>
+
+                <button type="button" class="primary-button" id="addNewRoomButton">
+                    <i class="fa-solid fa-plus"></i>
+                    Add New Room
+                </button>
+            </div>
+
+            <!-- Room Overview -->
+            <section class="overview-section" id="overview">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="section-eyebrow">PROPERTY OVERVIEW</p>
+                        <h3>Room Statistics</h3>
+                    </div>
+                    <span class="overview-caption">Live room overview</span>
+                </div>
+
+                <div class="stats-grid">
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <div class="stat-icon rooms-icon">
+                                <i class="fa-solid fa-hotel"></i>
+                            </div>
+                            <span class="stat-tag">PROPERTY</span>
+                        </div>
+                        <p class="stat-label">Total Rooms</p>
+                        <h3 id="totalRooms">--</h3>
+                        <p class="stat-description">All hotel rooms</p>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <div class="stat-icon available-icon">
+                                <i class="fa-solid fa-door-open"></i>
+                            </div>
+                            <span class="stat-tag">AVAILABLE</span>
+                        </div>
+                        <p class="stat-label">Available Rooms</p>
+                        <h3 id="availableRooms">--</h3>
+                        <p class="stat-description">Ready for reservations</p>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <div class="stat-icon occupied-icon">
+                                <i class="fa-solid fa-bed"></i>
+                            </div>
+                            <span class="stat-tag">OCCUPIED</span>
+                        </div>
+                        <p class="stat-label">Occupied Rooms</p>
+                        <h3 id="occupiedRooms">--</h3>
+                        <p class="stat-description">Currently occupied</p>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <div class="stat-icon maintenance-icon">
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                            </div>
+                            <span class="stat-tag">MAINTENANCE</span>
+                        </div>
+                        <p class="stat-label">Maintenance</p>
+                        <h3 id="maintenanceRooms">--</h3>
+                        <p class="stat-description">Under maintenance</p>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <div class="stat-icon checkout-icon">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                            </div>
+                            <span class="stat-tag">BOOKED</span>
+                        </div>
+                        <p class="stat-label">Booked Rooms</p>
+                        <h3 id="bookedRooms">--</h3>
+                        <p class="stat-description">Reserved by guests</p>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Rooms Inventory -->
+            <section class="panel rooms-panel" id="rooms">
+
+                <div class="panel-header">
+                    <div>
+                        <p class="section-eyebrow">ROOM INVENTORY</p>
+                        <h3>All Rooms</h3>
+                    </div>
+
+                    <span class="room-count" id="roomCount">0 Rooms</span>
+                </div>
+
+                <!-- Toolbar -->
+                <div class="room-toolbar">
+
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search"
+                               id="roomSearch"
+                               placeholder="Search by room number or type...">
+                    </div>
+
+                    <div class="filter-box">
+                        <i class="fa-solid fa-filter"></i>
+                        <select id="roomStatusFilter">
+                            <option value="ALL">All Rooms</option>
+                            <option value="AVAILABLE">Available</option>
+                            <option value="OCCUPIED">Occupied</option>
+                            <option value="CHECKED_OUT">Checked Out</option>
+                            <option value="MAINTENANCE">Maintenance</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="secondary-button" id="resetFiltersButton">
+                        <i class="fa-solid fa-rotate-left"></i>
+                        Reset
+                    </button>
+
+                </div>
+
+                <!-- Scrollable Table -->
+                <div class="table-wrapper">
+
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>ROOM</th>
+                            <th>ROOM TYPE</th>
+                            <th>CAPACITY</th>
+                            <th>PRICE / NIGHT</th>
+                            <th>STATUS</th>
+                            <th>LAST CHECKOUT</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                        </thead>
+
+                        <tbody id="roomsTableBody">
+                        <tr>
+                            <td colspan="7" class="empty-state">
+                                <i class="fa-solid fa-bed"></i>
+                                <span>Loading room information...</span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div class="table-footer">
+                    <span>Room inventory management</span>
+                    <span><i class="fa-solid fa-shield-halved"></i> Admin access</span>
+                </div>
+
+            </section>
+
+            <!-- Add / Edit Room -->
+            <section class="panel room-form-panel" id="roomFormSection" hidden>
+
+                <div class="panel-header">
+                    <div>
+                        <p class="section-eyebrow">ROOM INFORMATION</p>
+                        <h3 id="roomFormTitle">Add New Room</h3>
+                    </div>
+
+                    <button type="button" class="secondary-button" id="cancelRoomFormButton">
+                        <i class="fa-solid fa-xmark"></i>
+                        Cancel
+                    </button>
+                </div>
+
+                <form id="roomForm">
+                    <input type="hidden" id="roomId">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="roomNumber">Room Number</label>
+                            <input type="text" id="roomNumber" name="roomNumber" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="roomType">Room Type</label>
+                            <input type="text" id="roomType" name="roomType" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="roomCapacity">Capacity</label>
+                            <input type="number" id="roomCapacity" name="capacity" min="1" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="roomPrice">Price per Night (PKR)</label>
+                            <input type="number" id="roomPrice" name="pricePerNight" min="1" step="0.01" required>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="roomDescription">Room Description</label>
+                            <textarea id="roomDescription" name="description" rows="4" required></textarea>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="roomImageUrl">Room Image URL</label>
+                            <input type="url"
+                                   id="roomImageUrl"
+                                   name="imageUrl"
+                                   placeholder="https://example.com/room.jpg"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="roomStatus">Room Status</label>
+                            <select id="roomStatus" name="status">
+                                <option value="AVAILABLE">Available</option>
+                                <option value="MAINTENANCE">Maintenance</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <p id="roomFormMessage" role="status" aria-live="polite"></p>
+
+                    <div class="form-actions">
+                        <button type="submit" class="primary-button" id="saveRoomButton">
+                            <i class="fa-solid fa-check"></i>
+                            Save Room
+                        </button>
+
+                        <button type="reset" class="secondary-button">
+                            Clear Form
+                        </button>
+                    </div>
+
+                </form>
+            </section>
+
+            <!-- Room History Modal -->
+            <div class="modal-overlay" id="roomHistoryModal" aria-hidden="true">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <div>
+                            <p class="section-eyebrow">ROOM DETAILS</p>
+                            <h3 id="historyRoomTitle">Room History</h3>
+                        </div>
+
+                        <button type="button"
+                                class="modal-close"
+                                id="closeHistoryModal"
+                                aria-label="Close history">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+
+                    <div class="room-details-grid">
+                        <div>
+                            <span>Room Number</span>
+                            <strong id="historyRoomNumber">--</strong>
+                        </div>
+
+                        <div>
+                            <span>Room Type</span>
+                            <strong id="historyRoomType">--</strong>
+                        </div>
+
+                        <div>
+                            <span>Price / Night</span>
+                            <strong id="historyRoomPrice">--</strong>
+                        </div>
+
+                        <div>
+                            <span>Capacity</span>
+                            <strong id="historyRoomCapacity">--</strong>
+                        </div>
+
+                        <div>
+                            <span>Current Status</span>
+                            <strong id="historyRoomStatus">--</strong>
+                        </div>
+                    </div>
+
+                    <div class="history-section">
+                        <div class="panel-header">
+                            <div>
+                                <p class="section-eyebrow">PAST RESERVATIONS</p>
+                                <h3>Booking History</h3>
+                            </div>
+                        </div>
+
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>GUEST</th>
+                                    <th>PHONE</th>
+                                    <th>CHECK-IN</th>
+                                    <th>CHECK-OUT</th>
+                                    <th>BOOKING DATE</th>
+                                    <th>STATUS</th>
+                                </tr>
+                                </thead>
+
+                                <tbody id="roomHistoryBody">
+                                <tr>
+                                    <td colspan="6" class="empty-state">
+                                        <i class="fa-solid fa-clock-rotate-left"></i>
+                                        <span>Loading booking history...</span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="dashboard-footer">
+                <p>
+                    © <span id="currentYear"></span>
+                    ELYSIAN Hotel & Stay
+                </p>
+                <span>Designed for exceptional hospitality.</span>
+            </footer>
+
+        </section>
+    </main>
+</div>
+
+<script src="../javascript/manage-rooms.js"></script>
+
+</body>
+</html>
