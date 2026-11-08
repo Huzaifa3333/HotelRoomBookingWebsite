@@ -613,41 +613,62 @@ body {
 @media (max-width: 767px) {
 
     /* Navbar */
-    .navbar {
-        min-height: 68px;
-        padding: 0 5%;
-        gap: 10px;
-    }
+   /* Navbar */
+   .navbar {
+       width: 100%;
+       min-height: auto;
+       padding: 15px 5%;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       flex-wrap: wrap;
+       gap: 15px;
+       background: #101c2c;
+   }
 
-    .brand {
-        gap: 7px;
-    }
+   .brand {
+       gap: 7px;
+       flex-shrink: 0;
+   }
 
-    .brand-icon {
-        width: 31px;
-        height: 31px;
-        font-size: 19px;
-    }
+   .brand-icon {
+       width: 30px;
+       height: 30px;
+       font-size: 19px;
+   }
 
-    .brand-name {
-        font-size: 16px;
-        letter-spacing: 1.5px;
-    }
+   .brand-name {
+       font-size: 16px;
+       letter-spacing: 1.5px;
+   }
 
-    .brand-name small {
-        font-size: 7px;
-        letter-spacing: 1.8px;
-    }
+   .brand-name small {
+       font-size: 7px;
+       letter-spacing: 1.8px;
+   }
 
-    .nav-links {
-        display: none;
-    }
+   .nav-links {
+       order: 3;
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-wrap: wrap;
+       gap: 10px 22px;
+   }
 
-    .auth-box {
-        gap: 6px;
-        padding: 9px 12px;
-        font-size: 11px;
-    }
+   .nav-links a {
+       font-size: 12px;
+   }
+
+   .auth-box {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       padding: 9px 13px;
+       gap: 6px;
+       font-size: 11px;
+   }
 
     .auth-icon {
         width: 15px;
@@ -835,7 +856,24 @@ body {
 
     /* Navbar */
     .navbar {
-        padding: 0 4%;
+        width: 100%;
+        min-height: auto;
+        padding: 13px 4%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        background: #101c2c;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 15px;
     }
 
     .brand-name {
